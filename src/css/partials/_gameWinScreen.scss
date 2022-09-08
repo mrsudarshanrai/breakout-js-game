@@ -1,0 +1,47 @@
+.game_won_screen {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  color: $white;
+  .content {
+    margin: 100px auto;
+    header {
+      margin: 0 0 60px 0;
+      h1 {
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+
+        p {
+          margin: 16px 0 0 0;
+          font-size: 2em;
+          text-shadow: 2px 4px red;
+          text-align: center;
+        }
+      }
+    }
+    .score_title {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .win_score_count {
+      font-size: 2.3em;
+      text-shadow: 2px 4px red;
+      margin: 17px 0 0;
+      letter-spacing: 6px;
+      text-align: center;
+    }
+    .actions {
+      text-align: center;
+
+      button {
+        @include Btn();
+      }
+    }
+  }
+}

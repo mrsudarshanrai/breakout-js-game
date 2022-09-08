@@ -1,0 +1,61 @@
+   <svg
+            width="400"
+            height="106"
+            viewBox="0 0 400 106"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="84.6172"
+              y="84.6154"
+              width="115.385"
+              height="20.5128"
+              fill="#FFA822"
+            />
+            <rect
+              x="212.82"
+              y="84.6154"
+              width="102.564"
+              height="20.5128"
+              fill="#FF6150"
+            />
+            <rect
+              x="123.078"
+              y="56.4103"
+              width="76.9231"
+              height="20.5128"
+              fill="#553772"
+            />
+            <rect
+              x="220.512"
+              y="56.4103"
+              width="76.9231"
+              height="20.5128"
+              fill="#C7417B"
+            />
+            <rect
+              x="323.078"
+              y="28.2051"
+              width="76.9231"
+              height="20.5128"
+              fill="#FACD60"
+            />
+            <rect x="251.281" width="115.385" height="20.5128" fill="#8A00D4" />
+            <rect
+              x="200"
+              y="28.2051"
+              width="115.385"
+              height="20.5128"
+              fill="#FB7756"
+            />
+            <rect
+              x="64.1016"
+              y="28.2051"
+              width="115.385"
+              height="20.5128"
+              fill="#E74645"
+            />
+            <rect width="115.385" height="20.5128" fill="#F782C2" />
+            <rect y="56.4103" width="115.385" height="20.5128" fill="#1AC0C6" />
+            <rect x="135.898" width="102.564" height="20.5128" fill="#D527B7" />
+          </svg>

@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("./partials/font/PressStart2P-Regular.woff2") format("woff2"), url("./partials/font/PressStart2P-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: #242424;
+}
+
+.canvas_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.canvas_wrapper .screen {
+  height: 100%;
+}
+.canvas_wrapper .screen_landing {
+  height: 100%;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.canvas_wrapper .screen_landing svg {
+  margin: 60px 0 10px 0;
+}
+.canvas_wrapper .screen_landing .title {
+  color: #fff;
+  margin: 0px 0 50px 0;
+}
+.canvas_wrapper .screen_landing button {
+  background-color: #df7126;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid;
+  cursor: pointer;
+  margin: 15px 0;
+  width: 140px;
+  height: 45px;
+}
+.canvas_wrapper .screen_landing button:hover {
+  background-color: #883d0b;
+}
+.canvas_wrapper .screen_landing button:active {
+  background-color: #883d0b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.canvas_wrapper .screen_landing button svg {
+  margin: 0;
+  width: 17px;
+  height: 17px;
+}
+.canvas_wrapper .screen_landing .levels {
+  background-color: #242424;
+  border: 2px solid #df7126;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  width: 500px;
+  height: 170px;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  display: none;
+}
+.canvas_wrapper .screen_landing .levels_container {
+  position: relative;
+}
+.canvas_wrapper .screen_landing .levels_container .close_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.canvas_wrapper .screen_landing .levels_container .close_icon:hover {
+  color: #e74645;
+}
+.canvas_wrapper .screen_landing .levels_container .levels_items {
+  height: 100px;
+  margin: 10px 0 0 0;
+  display: flex;
+  gap: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas_wrapper .screen_landing .levels_container .levels_items .level {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #df7126;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.canvas_wrapper .screen_landing .levels_container .levels_items .level:hover {
+  border: 1px solid #fff;
+}
+.canvas_wrapper .canvas {
+  width: 800px;
+  height: 660px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(12px 14px 116px black);
+}
+.canvas_wrapper .canvas #score_container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+}
+.canvas_wrapper .canvas .info_msg {
+  position: absolute;
+  left: 10px;
+  top: 100px;
+  color: #fff;
+  -webkit-animation: slide-in-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+canvas {
+  background-color: transparent;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(100);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(150);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(160);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(100);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(150);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(160);
+    opacity: 0;
+  }
+}
+.game_over_screen {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  color: #fff;
+}
+.game_over_screen .content {
+  margin: 100px auto;
+}
+.game_over_screen .content header {
+  margin: 0 0 60px 0;
+}
+.game_over_screen .content header h1 {
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+.game_over_screen .content header h1 p {
+  margin: 16px 0 0 0;
+  font-size: 2em;
+  text-shadow: 2px 4px red;
+  text-align: center;
+}
+.game_over_screen .content .score_title {
+  text-align: center;
+  font-size: 1.2em;
+}
+.game_over_screen .content .score_count {
+  font-size: 2.3em;
+  text-shadow: 2px 4px red;
+  margin: 17px 0 0;
+  letter-spacing: 6px;
+  text-align: center;
+}
+.game_over_screen .content .actions {
+  text-align: center;
+}
+.game_over_screen .content .actions button {
+  background-color: #df7126;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid;
+  cursor: pointer;
+  margin: 15px 0;
+}
+.game_over_screen .content .actions button:hover {
+  background-color: #883d0b;
+}
+.game_over_screen .content .actions button:active {
+  background-color: #883d0b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.game_won_screen {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  color: #fff;
+}
+.game_won_screen .content {
+  margin: 100px auto;
+}
+.game_won_screen .content header {
+  margin: 0 0 60px 0;
+}
+.game_won_screen .content header h1 {
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+.game_won_screen .content header h1 p {
+  margin: 16px 0 0 0;
+  font-size: 2em;
+  text-shadow: 2px 4px red;
+  text-align: center;
+}
+.game_won_screen .content .score_title {
+  text-align: center;
+  font-size: 1.2em;
+}
+.game_won_screen .content .win_score_count {
+  font-size: 2.3em;
+  text-shadow: 2px 4px red;
+  margin: 17px 0 0;
+  letter-spacing: 6px;
+  text-align: center;
+}
+.game_won_screen .content .actions {
+  text-align: center;
+}
+.game_won_screen .content .actions button {
+  background-color: #df7126;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid;
+  cursor: pointer;
+  margin: 15px 0;
+}
+.game_won_screen .content .actions button:hover {
+  background-color: #883d0b;
+}
+.game_won_screen .content .actions button:active {
+  background-color: #883d0b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}/*# sourceMappingURL=style.css.map */

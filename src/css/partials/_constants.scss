@@ -1,0 +1,25 @@
+$white: #fff;
+$loaderBg: #242424;
+$primary: #df7126;
+$pressed: #883d0b;
+$btnShadow: #666;
+$danger: #e74645;
+
+@mixin Btn() {
+  background-color: $primary;
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid;
+  cursor: pointer;
+  margin: 15px 0;
+
+  &:hover {
+    background-color: $pressed;
+  }
+  &:active {
+    background-color: $pressed;
+    box-shadow: 0 5px $btnShadow;
+    transform: translateY(4px);
+  }
+}

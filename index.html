@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+
+  <body>
+    <!-- main game screen-->
+    <div class="container">
+      <!-- start Landing screen-->
+    </div>
+    <div class="canvas_wrapper">
+      <div class="screen">
+        <div class="screen_landing">
+          <img src="./assets/icons/logo.svg" />
+          <h1 class="title">BREAKOUT</h1>
+          <button title="start" class="start_btn">
+            <img src="./assets/icons/play.svg" />
+          </button>
+          <div class="levels">
+            <div class="levels_container">
+              <p class="close_icon" title="close level selection">x</p>
+              <h5>Select Level</h5>
+              <div class="levels_items"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="game_over_screen">
+        <div class="content">
+          <header>
+            <h1>
+              GAME
+              <p>OVER</p>
+            </h1>
+          </header>
+          <p class="score_title">Your Score</p>
+          <p class="score_count">0</p>
+          <div class="actions">
+            <button title="Restart" class="win_restart_btn">
+              <img src="./assets/icons/restart.svg" />
+            </button>
+            <button title="menu" class="win_main_menu">
+              <img src="./assets/icons/menu.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="game_won_screen">
+        <div class="content">
+          <header>
+            <h1>
+              YOU
+              <p>WON</p>
+            </h1>
+          </header>
+          <p class="score_title">Your Score</p>
+          <p class="win_score_count">0</p>
+          <div class="actions">
+            <button title="Restart" class="restart_btn">
+              <img src="./assets/icons/restart.svg" />
+            </button>
+            <button title="menu" class="main_menu">
+              <img src="./assets/icons/menu.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="canvas">
+        <p id="score_container">score:<span id="score">0</span></p>
+        <div class="info_container"></div>
+      </div>
+    </div>
+    <script src="./dist/js/objects/DOM.js"></script>
+    <script src="./dist/js/objects/Sound.js"></script>
+    <script src="./dist/js/config.js"></script>
+    <script src="./dist/js/level/level.js"></script>
+    <script src="./dist/js/utils.js"></script>
+    <script src="./dist/js/types.js"></script>
+    <!--objects-->
+    <script src="./dist/js/objects/Player.js"></script>
+    <script src="./dist/js/objects/Brick.js"></script>
+    <script src="./dist/js/objects/Ball.js"></script>
+
+    <!--main -->
+    <script src="./dist/js/listeners.js"></script>
+    <script src="./dist/js/Game.js"></script>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
